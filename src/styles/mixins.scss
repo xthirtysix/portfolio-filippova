@@ -1,0 +1,46 @@
+@mixin container {
+  box-sizing: border-box;
+  width: calc(100vw - 15rem);
+  padding: 2rem;
+}
+
+@mixin grid-table {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-header {
+    margin: 0;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &-paragraph {
+    margin: 0;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@mixin main-header {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+
+@mixin underline ($width) {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.2rem;
+    left: 0;
+    width: $width;
+    height: 0.2rem;
+    background-color: #42b983;
+  }
+}
