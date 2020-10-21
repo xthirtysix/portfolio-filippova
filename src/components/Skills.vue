@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/mixins.scss";
+
 .skill-list {
   @include grid-table;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -65,6 +66,8 @@ export default {
 
   .rating-empty,
   .rating-filled {
+    @include with-shadow-circle;
+
     position: relative;
     display: block;
 
@@ -73,7 +76,7 @@ export default {
       display: block;
       width: 0.5rem;
       height: 0.5rem;
-      border: 1px solid #2c3e50;
+      border: 1px solid $foreground-color;
       border-radius: 50%;
     }
   }

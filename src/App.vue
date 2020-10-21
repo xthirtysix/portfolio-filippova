@@ -2,7 +2,7 @@
 #app
   header#header
     img.logo(
-      src="./assets/logo.svg",
+      src="./assets/img/logo.svg",
       width="202",
       height="96",
       alt="Iana Moskalenko site logo"
@@ -49,6 +49,7 @@ body {
   padding: 2rem 1rem;
   color: $foreground_inversed_color;
   background-color: $dark_accent_color;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.34);
 
   .logo {
     width: 100%;
@@ -66,6 +67,8 @@ body {
     list-style: none;
 
     a {
+      @include underline(100%, true);
+
       position: relative;
       font-weight: bold;
       text-transform: uppercase;
@@ -74,10 +77,6 @@ body {
 
       &.router-link-exact-active {
         color: $light_accent_color;
-      }
-
-      &:hover {
-        @include underline(100%);
       }
     }
   }
@@ -88,11 +87,20 @@ body {
     align-items: flex-end;
 
     color: $foreground_inversed_color;
-    opacity: 0.3;
+    opacity: 0.6;
 
     a {
+      @include underline(100%, true);
+
       padding-left: 0.2rem;
       color: $foreground_inversed_color;
+
+      &:hover,
+      &:focus {
+        font-weight: 700;
+        color: $light_accent_color;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -117,7 +125,22 @@ body {
     padding: 1rem;
 
     .list {
-      display: none;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 6rem;
+
+      li {
+        &:first-of-type {
+          text-align: left;
+        }
+
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+
+      a {
+        padding: 0.5rem;
+      }
     }
 
     .logo {
