@@ -197,9 +197,10 @@ export default {
 
   .picture {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 15rem);
+    height: 100%;
     padding: 0;
     background-color: #2c3e50;
 
@@ -213,6 +214,7 @@ export default {
 
     img {
       width: 100%;
+      max-width: 500px;
       height: 100%;
       clip-path: circle(40% at center);
     }
