@@ -1,49 +1,64 @@
 <template lang="pug">
-  .about
-    .header-wrapper
-      h1.main-header
-        span.visually-hidden About&nbsp;
-        | Iana Moskalenko
-      span.profession(aria-label="profession") Architect
-    section.picture
-      h2.visually-hidden Picture of Iana Moskalenko
-      figure
-        picture
-          source(
-            media="(max-width: 1199px)"
-            srcset="../assets/iana_moskalenko_mobile.jpg")
-          img(
-            src="../assets/iana_moskalenko.jpg"
-            width="490"
-            height="753"
-            alt="Picture of Iana Moskalenko"
-          )
-    section.experience
-      h2.section-header Experience
-      experience
-    section.education
-      h2.section-header Education
-      education
-    section.skills
-      h2.section-header Computer Skills
-      skills
-    section.certificates
-      h2.section-header Certificates
-      certificates
+.about
+  .header-wrapper
+    h1.main-header
+      span.visually-hidden About&nbsp;
+      | Iana Moskalenko
+    span.profession(aria-label="profession") Architect
+  section.picture
+    h2.visually-hidden Picture of Iana Moskalenko
+    figure
+      picture
+        source(
+          media="(max-width: 1199px)",
+          srcset="../assets/img/iana_moskalenko_mobile.jpg"
+          :src-placeholder="mobilePlaceholder"
+        )
+        v-lazy-image(
+          :src="picture",
+          :src-placeholder="placeholder",
+          width="490",
+          height="753",
+          alt="Picture of Iana Moskalenko"
+        )
+  section.experience
+    h2.section-header Experience
+    experience
+  section.education
+    h2.section-header Education
+    education
+  section.skills
+    h2.section-header Computer Skills
+    skills
+  section.certificates
+    h2.section-header Certificates
+    certificates
 </template>
 
-<script lang="ts">
+<script>
 import Certificates from "../components/Certificates.vue";
 import Education from "../components/Education.vue";
 import Experience from "../components/Experience.vue";
 import Skills from "../components/Skills.vue";
+import VLazyImage from "v-lazy-image";
+import picture from "../assets/img/iana_moskalenko.jpg";
+import placeholder from "../assets/img/placeholders/iana_moskalenko_placeholder.jpg";
+import mobilePlaceholder from "../assets/img/placeholders/iana_moskalenko_mobile_placeholder.jpg";
 
 export default {
   components: {
     Certificates,
     Education,
     Experience,
-    Skills
+    Skills,
+    VLazyImage
+  },
+  data: function() {
+    return {
+      picture,
+      placeholder,
+      mobilePlaceholder
+    };
   }
 };
 </script>
@@ -51,6 +66,8 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/mixins.scss";
 @import "@/styles/variables.scss";
+
+@include progressive-images;
 
 .about {
   @include container;
@@ -79,7 +96,7 @@ export default {
 }
 
 .profession {
-  @include underline(100%);
+  @include underline(100%, false);
   position: relative;
   font-size: 1rem;
   font-weight: 700;
@@ -95,6 +112,8 @@ export default {
     margin-top: 0;
     margin-left: auto;
     margin-right: 0;
+    line-height: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
 }
 
@@ -138,10 +157,13 @@ export default {
     align-self: center;
 
     figure {
+      @include with-shadow-circle;
+
       position: relative;
       margin: 0;
       width: 100px;
       height: auto;
+      box-shadow: none;
     }
 
     img {
@@ -174,14 +196,19 @@ export default {
   }
 
   .picture {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: auto;
+    height: calc(100vh - 15rem);
     padding: 0;
     background-color: #2c3e50;
 
     figure {
+      @include with-shadow-circle;
+
       position: relative;
       margin: 0;
+      box-shadow: none;
     }
 
     img {
