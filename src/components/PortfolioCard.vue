@@ -112,7 +112,7 @@ export default {
 
   width: 100%;
   height: auto;
-  background-color: $accent-color;
+  background-color: $background-color-inversed;
 }
 
 .card-header,
