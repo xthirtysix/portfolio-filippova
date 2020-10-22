@@ -79,6 +79,7 @@ export default {
 
 .card {
   @include interactive-with-shadow;
+  @include interactive-image-open-tip;
   @include transition(0.5s);
 
   display: flex;
@@ -98,21 +99,12 @@ export default {
 }
 
 .preview-container {
-  @include interactive-image-open-tip;
-
   order: -1;
   overflow: hidden;
   margin: 0;
   line-height: 0;
   cursor: pointer;
   outline: none;
-
-  &:hover,
-  &:focus {
-    .preview-image {
-      transform: scale(1.05);
-    }
-  }
 }
 
 .preview-image {

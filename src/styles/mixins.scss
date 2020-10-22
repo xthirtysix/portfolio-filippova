@@ -65,9 +65,15 @@
   }
 
   &:hover {
-    &::before {
-      display: block;
-      opacity: 1;
+    &:focus {
+      &::before {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    .preview-image {
+      transform: scale(1.05);
     }
   }
 }
