@@ -108,7 +108,7 @@
     left: 0;
     width: $width;
     height: 2px;
-    background-color: $light_accent_color;
+    background-color: $accent_color;
     @if $isAnimation == true {
       opacity: 0;
     } @else {
@@ -129,4 +129,14 @@
 
 @mixin transition($time) {
   transition: all $time $cubic-bezier;
+}
+
+@mixin visually-hidden {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
 }

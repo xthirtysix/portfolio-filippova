@@ -24,8 +24,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins.scss";
+@import "@/styles/index.scss";
+
 .table {
   @include grid-table;
+}
+
+.table-header {
+  font-size: 1.1rem;
+}
+
+.table-paragraph {
+  font-size: 1rem;
 }
 </style>

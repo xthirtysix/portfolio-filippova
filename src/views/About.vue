@@ -5,9 +5,9 @@
       span.visually-hidden About&nbsp;
       | Iana Moskalenko
     span.profession(aria-label="profession") Architect
-  section.picture
+  section.picture-container
     h2.visually-hidden Picture of Iana Moskalenko
-    figure
+    p
       picture
         source(
           media="(max-width: 1199px)",
@@ -19,7 +19,7 @@
           :src-placeholder="placeholder",
           width="490",
           height="753",
-          alt="Picture of Iana Moskalenko"
+          alt="Iana Moskalenko"
         )
   section.experience
     h2.section-header Experience
@@ -103,15 +103,14 @@ export default {
   text-transform: uppercase;
 }
 
-.picture {
+.picture-container {
   grid-area: picture;
   height: fit-content;
 
-  figure {
+  p {
     display: flex;
-    margin-top: 0;
+    margin: 0;
     margin-left: auto;
-    margin-right: 0;
     line-height: 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
@@ -134,7 +133,7 @@ export default {
   padding-bottom: 2rem;
 }
 
-@media (min-width: $max_mobile) and (max-width: $max_tablet) {
+@media (min-width: $mobile) and (max-width: $tablet) {
   .about {
     grid-template-columns: min-content 1fr;
     grid-template-areas:
@@ -151,18 +150,18 @@ export default {
     align-self: center;
   }
 
-  .picture {
+  .picture-container {
     width: 100%;
     height: fit-content;
     align-self: center;
 
-    figure {
+    p {
       @include with-shadow-circle;
 
       position: relative;
-      margin: 0;
       width: 100px;
       height: auto;
+      margin: 0;
       box-shadow: none;
     }
 
@@ -174,7 +173,7 @@ export default {
   }
 }
 
-@media (max-width: $max_mobile) {
+@media (max-width: $mobile) {
   .about {
     grid-template-areas:
       "picture"
@@ -195,7 +194,7 @@ export default {
     display: none;
   }
 
-  .picture {
+  .picture-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,7 +203,7 @@ export default {
     padding: 0;
     background-color: #2c3e50;
 
-    figure {
+    p {
       @include with-shadow-circle;
 
       position: relative;

@@ -287,7 +287,7 @@ export default {
   padding-bottom: 2rem;
 }
 
-@media (max-width: $max_mobile) {
+@media (max-width: $mobile) {
   .portfolio {
     width: 100%;
   }

@@ -2,19 +2,19 @@
 article.card
   .text-wrapper
     h3.card-header.card-main-header {{ item.name }}
-    .wrapper
+    .container
       p.card-paragraph(v-if="item.location") {{ item.location }}
         span(v-if="item.acreage") {{ item.acreage }} m
           sup 2
-    .wrapper
+    .container
       h4.card-header(v-if="item.position") Position:
       p.card-paragraph(v-if="item.position") {{ item.position }}
-    .wrapper
+    .container
       h4.card-header(v-if="item.activity") Activity:
       p.card-paragraph(v-if="item.activity") {{ item.activity }}
       p.card-paragraph(v-if="item.studentWork") Student work, {{ item.studentWork }}
-  p.preview(v-tabindex, @click="show", v-on:keyup.enter="show")
-    v-lazy-image(
+  p.preview-container(v-tabindex, @click="show", v-on:keyup.enter="show")
+    v-lazy-image.preview-image(
       :src="item.preview",
       :src-placeholder="item.placeholder",
       :alt="item.name"
@@ -29,14 +29,7 @@ article.card
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image";
-import Viewer from "v-viewer/src/component.vue";
-
 export default {
-  components: {
-    Viewer,
-    VLazyImage
-  },
   name: "portfolio-card",
   props: {
     item: {
@@ -80,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins.scss";
+@import "@/styles/index.scss";
 
 @include progressive-images;
 
@@ -93,13 +86,18 @@ export default {
   overflow: hidden;
   height: 100%;
   border-radius: 5px;
+  background-color: $background-color;
 }
 
 .text-wrapper {
   padding: 1rem;
 }
 
-.preview {
+.container {
+  margin-bottom: 0.2rem;
+}
+
+.preview-container {
   @include interactive-image-open-tip;
 
   order: -1;
@@ -111,17 +109,18 @@ export default {
 
   &:hover,
   &:focus {
-    img {
+    .preview-image {
       transform: scale(1.05);
     }
   }
+}
 
-  img {
-    @include transition(1s);
+.preview-image {
+  @include transition(1s);
 
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+  background-color: $accent-color;
 }
 
 .card-header,
@@ -133,10 +132,6 @@ export default {
 .card-header {
   margin-right: 0.1rem;
   margin-bottom: 0.3rem;
-}
-
-.wrapper {
-  margin-bottom: 0.2rem;
 }
 
 .card-main-header {

@@ -1,13 +1,13 @@
 // Media Queries
-$max_mobile: 767px;
-$max_tablet: 1199px;
+$mobile: 767px;
+$tablet: 1199px;
 
 // Colors
-$foreground_color: #2c3e50;
-$foreground_inversed_color: #fff;
-$background_color: #2c3e50;
-$dark_accent_color: #2c3e50;
-$light_accent_color: #42b983;
+$foreground-color: #2c3e50;
+$foreground-color-inversed: #ffffff;
+$background-color: #ffffff;
+$background-color-inversed: #2c3e50;
+$accent-color: #42b983;
 
-//Animation
+// Transitions
 $cubic-bezier: cubic-bezier(0.25, 0.8, 0.25, 1)
