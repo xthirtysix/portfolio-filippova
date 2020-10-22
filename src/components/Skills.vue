@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.skill-list
-  li.skill-list-item(v-for="(item, idx) in items", :key="`skill${idx}`")
+  li.skill-list-item(v-for="(item, idx) in skills", :key="`skill${idx}`")
     h3.skill-list-header {{ item.name }}
     span.visually-hidden Skill level: {{ item.rating }}&nbsp;out of 10
     ul.rating-list(aria-disabled="true")
@@ -18,20 +18,10 @@ ul.skill-list
 
 <script>
 export default {
-  data: function() {
-    return {
-      items: [
-        { name: "Autodesk Revit", rating: 9 },
-        { name: "Dynamo", rating: 4 },
-        { name: "ArchiCAD", rating: 7 },
-        { name: "3ds MAX + V-Ray", rating: 4 },
-        { name: "AutoCAD", rating: 8 },
-        { name: "Adobe Photoshop", rating: 7 },
-        { name: "Artlantis", rating: 8 },
-        { name: "Lumion", rating: 4 },
-        { name: "MS Office", rating: 10 }
-      ]
-    };
+  computed: {
+    skills: function() {
+      return this.$store.getters.skills;
+    }
   }
 };
 </script>

@@ -109,8 +109,7 @@ export default {
 
   p {
     display: flex;
-    margin: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     line-height: 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
