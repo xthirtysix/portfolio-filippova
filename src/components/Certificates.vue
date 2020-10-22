@@ -1,9 +1,9 @@
 <template lang="pug">
-ul.images(
+ul.list(
   v-viewer.static="{ movable: false, scalable: false, rotatable: false }"
 )
-  li(v-for="(item, idx) in items")
-    v-lazy-image(
+  li.list-item(v-for="(item, idx) in items")
+    v-lazy-image.image(
       :src="item.image",
       :src-placeholder="item.placeholder",
       :key="idx",
@@ -12,12 +12,6 @@ ul.images(
 </template>
 
 <script>
-import "viewerjs/dist/viewer.css";
-import Viewer from "v-viewer";
-import VLazyImage from "v-lazy-image";
-import Vue from "vue";
-Vue.use(Viewer);
-
 import c1 from "../assets/img/certificates/cert1.png";
 import c2 from "../assets/img/certificates/cert2.png";
 import c3 from "../assets/img/certificates/cert3.png";
@@ -31,7 +25,6 @@ import c4_placeholder from "../assets/img/certificates/placeholders/cert4_placeh
 import c5_placeholder from "../assets/img/certificates/placeholders/cert5_placeholder.jpg";
 
 export default {
-  components: { VLazyImage },
   data: function() {
     return {
       items: [
@@ -47,28 +40,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins.scss";
+@import "@/styles/index.scss";
 
 @include progressive-images;
 
-.images {
+.list {
   display: grid;
   margin: 0;
   padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1.3rem;
   list-style: none;
+}
 
-  li {
-    line-height: 0;
-  }
+.list-item {
+  line-height: 0;
+}
 
-  img {
-    @include interactive-with-shadow;
+.image {
+  @include interactive-with-shadow;
 
-    cursor: pointer;
-    width: 100%;
-    height: auto;
-  }
+  cursor: pointer;
+  width: 100%;
+  height: auto;
 }
 </style>

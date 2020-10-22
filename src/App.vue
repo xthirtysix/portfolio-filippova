@@ -7,22 +7,26 @@
       height="96",
       alt="Iana Moskalenko site logo"
     )
-    ul.list
+    ul.nav-list
       li
-        router-link(to="/") About
+        router-link.nav-link(to="/") About
       li
-        router-link(to="/portfolio") Portfolio
+        router-link.nav-link(to="/portfolio") Portfolio
     span.copyright developed by
-      a(href="https://github.com/xthirtysix") xthirtysix
+      a.copyright-link(href="https://github.com/xthirtysix") xthirtysix
   #content
     router-view
 </template>
 
 <style lang="scss">
 @import "@/styles/index.scss";
+@import "@/styles/fonts.scss";
+
+@include visually-hidden;
 
 body {
   margin: 0;
+  background-color: $background-color;
 }
 
 #app {
@@ -34,7 +38,7 @@ body {
   font-family: "Futura PT Book", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $foreground_color;
+  color: $foreground-color;
 }
 
 #header {
@@ -47,61 +51,61 @@ body {
   justify-content: center;
   height: 100%;
   padding: 2rem 1rem;
-  color: $foreground_inversed_color;
-  background-color: $dark_accent_color;
+  color: $foreground-color-inversed;
+  background-color: $background-color-inversed;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.34);
+}
 
-  .logo {
-    width: 100%;
-    height: auto;
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-row-gap: 1rem;
+  align-self: unsafe-center;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.nav-link {
+  @include underline(100%, true);
+
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $foreground-color-inversed;
+
+  &.router-link-exact-active {
+    color: $accent-color;
   }
+}
 
-  .list {
-    display: grid;
-    grid-template-rows: min-content;
-    grid-row-gap: 1rem;
-    align-self: unsafe-center;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    list-style: none;
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 
-    a {
-      @include underline(100%, true);
+  color: $foreground-color-inversed;
+  opacity: 0.6;
+}
 
-      position: relative;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $foreground_inversed_color;
+.copyright-link {
+  @include underline(100%, true);
 
-      &.router-link-exact-active {
-        color: $light_accent_color;
-      }
-    }
-  }
+  padding-left: 0.2rem;
+  color: $foreground-color-inversed;
 
-  .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    color: $foreground_inversed_color;
-    opacity: 0.6;
-
-    a {
-      @include underline(100%, true);
-
-      padding-left: 0.2rem;
-      color: $foreground_inversed_color;
-
-      &:hover,
-      &:focus {
-        font-weight: 700;
-        color: $light_accent_color;
-        text-decoration: none;
-      }
-    }
+  &:hover,
+  &:focus {
+    font-weight: 700;
+    color: $accent-color;
+    text-decoration: none;
   }
 }
 
@@ -113,7 +117,7 @@ body {
   margin-left: 15rem;
 }
 
-@media (max-width: $max_mobile) {
+@media (max-width: $mobile) {
   #app {
     grid-template-rows: min-content 1fr;
     grid-template-columns: unset;
@@ -123,34 +127,34 @@ body {
   #header {
     position: unset;
     padding: 1rem;
+  }
 
-    .list {
-      grid-template-columns: 1fr 1fr;
-      margin-top: 6rem;
+  .logo {
+    width: auto;
+    max-height: 10rem;
+  }
 
-      li {
-        &:first-of-type {
-          text-align: left;
-        }
+  .nav-list {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6rem;
+  }
 
-        &:last-of-type {
-          text-align: right;
-        }
-      }
-
-      a {
-        padding: 0.5rem;
-      }
+  .nav-item {
+    &:first-of-type {
+      text-align: left;
     }
 
-    .logo {
-      width: auto;
-      max-height: 10rem;
+    &:last-of-type {
+      text-align: right;
     }
+  }
 
-    .copyright {
-      display: none;
-    }
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .copyright {
+    display: none;
   }
 
   #content {
@@ -158,13 +162,5 @@ body {
     width: 100%;
     margin-left: 0;
   }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
 }
 </style>
