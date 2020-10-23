@@ -10,14 +10,14 @@ ul.table.education-table
 export default {
   computed: {
     education: function() {
-      return this.$store.getters.education;
-    }
-  }
-};
+      return this.$store.getters.education
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 .table {
   @include grid-table;

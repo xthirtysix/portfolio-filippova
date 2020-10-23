@@ -15,14 +15,14 @@ ul.table.experience-table
 export default {
   computed: {
     experience: function() {
-      return this.$store.getters.experience;
-    }
-  }
-};
+      return this.$store.getters.experience
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 .table {
   @include grid-table;
@@ -32,7 +32,7 @@ export default {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-gap: 1.4rem;
-  grid-template-areas: "position info";
+  grid-template-areas: 'position info';
   margin-bottom: 0.7rem;
 }
 

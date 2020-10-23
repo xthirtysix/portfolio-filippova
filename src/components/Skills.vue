@@ -20,14 +20,14 @@ ul.skill-list
 export default {
   computed: {
     skills: function() {
-      return this.$store.getters.skills;
-    }
-  }
-};
+      return this.$store.getters.skills
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 .skill-list {
   @include grid-table;
@@ -40,7 +40,7 @@ export default {
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-gap: 2rem 0.2rem;
-  grid-template-areas: "name rating";
+  grid-template-areas: 'name rating';
   align-items: baseline;
 }
 
@@ -57,7 +57,7 @@ export default {
   display: block;
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 0.5rem;
     height: 0.5rem;
@@ -87,7 +87,7 @@ export default {
     box-sizing: border-box;
     grid-gap: 0.5rem;
     grid-template-columns: 40% 60%;
-    grid-template-areas: "name rating";
+    grid-template-areas: 'name rating';
   }
 }
 </style>

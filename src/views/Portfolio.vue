@@ -7,21 +7,21 @@
 </template>
 
 <script>
-import PortfolioCard from "../components/PortfolioCard.vue";
+import PortfolioCard from '../components/PortfolioCard.vue'
 
 export default {
   components: { PortfolioCard },
   computed: {
     portfolio: function() {
-      return this.$store.getters.portfolio;
-    }
-  }
-};
+      return this.$store.getters.portfolio
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins.scss";
-@import "@/styles/variables.scss";
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
 
 .portfolio {
   @include container;

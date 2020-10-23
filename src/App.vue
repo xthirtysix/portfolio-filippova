@@ -19,8 +19,8 @@
 </template>
 
 <style lang="scss">
-@import "@/styles/index.scss";
-@import "@/styles/fonts.scss";
+@import '@/styles/index.scss';
+@import '@/styles/fonts.scss';
 
 @include visually-hidden;
 
@@ -32,17 +32,15 @@ body {
 #app {
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 100vh;
-  grid-template-columns: 15rem 1fr;
-  grid-template-areas: "header content";
-  font-family: "Futura PT Book", Helvetica, Arial, sans-serif;
+  grid-template-areas: 'header content';
+  font-family: 'Futura PT Book', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $foreground-color;
 }
 
 #header {
-  grid-area: "header";
+  grid-area: 'header';
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -110,18 +108,19 @@ body {
 }
 
 #content {
-  grid-area: "content";
+  grid-area: 'content';
   display: flex;
   justify-content: center;
-  width: calc(100vw - 15rem);
-  margin-left: 15rem;
+  align-items: center;
+  width: calc(100vw - 18rem);
+  margin-left: 16rem;
 }
 
 @media (max-width: $mobile) {
   #app {
     grid-template-rows: min-content 1fr;
     grid-template-columns: unset;
-    grid-template-areas: "nav" "content";
+    grid-template-areas: 'nav' 'content';
   }
 
   #header {

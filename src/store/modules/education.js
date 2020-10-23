@@ -4,16 +4,16 @@ export default {
   state: {
     education: [
       {
-        name: "Lipetsk State Technical University, Lipetsk, Russia",
+        name: 'Lipetsk State Technical University, Lipetsk, Russia',
         description:
-          "Faculty of Civil Engineering, Building Design (with honors)",
-        years: "2008-2013"
-      }
-    ]
+          'Faculty of Civil Engineering, Building Design (with honors)',
+        years: '2008-2013',
+      },
+    ],
   },
   getters: {
     education: function(state) {
-      return state.education;
-    }
-  }
-};
+      return state.education
+    },
+  },
+}

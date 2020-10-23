@@ -36,14 +36,14 @@
 </template>
 
 <script>
-import Certificates from "../components/Certificates.vue";
-import Education from "../components/Education.vue";
-import Experience from "../components/Experience.vue";
-import Skills from "../components/Skills.vue";
-import VLazyImage from "v-lazy-image";
-import picture from "../assets/img/iana_moskalenko.jpg";
-import placeholder from "../assets/img/placeholders/iana_moskalenko_placeholder.jpg";
-import mobilePlaceholder from "../assets/img/placeholders/iana_moskalenko_mobile_placeholder.jpg";
+import Certificates from '../components/Certificates.vue'
+import Education from '../components/Education.vue'
+import Experience from '../components/Experience.vue'
+import Skills from '../components/Skills.vue'
+import VLazyImage from 'v-lazy-image'
+import picture from '../assets/img/iana_moskalenko.jpg'
+import placeholder from '../assets/img/placeholders/iana_moskalenko_placeholder.jpg'
+import mobilePlaceholder from '../assets/img/placeholders/iana_moskalenko_mobile_placeholder.jpg'
 
 export default {
   components: {
@@ -51,21 +51,21 @@ export default {
     Education,
     Experience,
     Skills,
-    VLazyImage
+    VLazyImage,
   },
   data: function() {
     return {
       picture,
       placeholder,
-      mobilePlaceholder
-    };
-  }
-};
+      mobilePlaceholder,
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins.scss";
-@import "@/styles/variables.scss";
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
 
 @include progressive-images;
 
@@ -75,11 +75,12 @@ export default {
   grid-template-columns: 1fr;
   grid-column-gap: 1rem;
   grid-template-areas:
-    "header picture"
-    "experience picture"
-    "education picture"
-    "skills skills"
-    "certificates certificates";
+    'header picture'
+    'experience picture'
+    'education picture'
+    'skills skills'
+    'certificates certificates';
+  width: 100%;
   max-width: 1300px;
 }
 
@@ -136,11 +137,11 @@ export default {
   .about {
     grid-template-columns: min-content 1fr;
     grid-template-areas:
-      "picture header"
-      "experience experience"
-      "education education"
-      "skills skills"
-      "certificates certificates";
+      'picture header'
+      'experience experience'
+      'education education'
+      'skills skills'
+      'certificates certificates';
     width: 100%;
   }
 
@@ -174,18 +175,19 @@ export default {
 
 @media (max-width: $mobile) {
   .about {
+    width: 100%;
     grid-template-areas:
-      "picture"
-      "experience"
-      "education"
-      "skills"
-      "certificates";
+      'picture'
+      'experience'
+      'education'
+      'skills'
+      'certificates';
     padding: 0;
   }
 
   section {
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     padding: 0 1rem;
   }
 

@@ -30,7 +30,7 @@ article.card
 
 <script>
 export default {
-  name: "portfolio-card",
+  name: 'portfolio-card',
   props: {
     item: {
       name: { type: String },
@@ -38,42 +38,42 @@ export default {
       acreage: { type: String },
       position: { type: String },
       activity: { type: String },
-      import: { type: Function }
-    }
+      import: { type: Function },
+    },
   },
   data: function() {
     return {
-      images: []
-    };
+      images: [],
+    }
   },
   mounted() {
-    this.importAll(this.item.images);
+    this.importAll(this.item.images)
   },
   methods: {
     importAll(r) {
       r.keys().forEach(key =>
         this.images.push({ pathLong: r(key), pathShort: key })
-      );
+      )
     },
     inited(viewer) {
-      this.$viewer = viewer;
+      this.$viewer = viewer
     },
     show() {
-      this.$viewer.show();
-    }
+      this.$viewer.show()
+    },
   },
   directives: {
     tabindex: {
       inserted(el) {
-        el.setAttribute("tabindex", 0);
-      }
-    }
-  }
-};
+        el.setAttribute('tabindex', 0)
+      },
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 @include progressive-images;
 

@@ -15,14 +15,14 @@ ul.list(
 export default {
   computed: {
     certificates: function() {
-      return this.$store.getters.certificates;
-    }
-  }
-};
+      return this.$store.getters.certificates
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 @include progressive-images;
 
