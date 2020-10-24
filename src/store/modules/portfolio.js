@@ -12,10 +12,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/first_line/',
           true,
-          /\.png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/first_line/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/first_line/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/first_line/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/first_line/placeholder.jpg'),
       },
       {
         name: 'Residential Complex «My Rhythm»',
@@ -27,10 +27,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/my_rhythm/',
           true,
-          /\.png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/my_rhythm/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/my_rhythm/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/my_rhythm/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/my_rhythm/placeholder.jpg'),
       },
       {
         name: 'Mosfilm, Warehouse',
@@ -41,10 +41,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/mosfilm_warehouse/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/mosfilm_warehouse/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/mosfilm_warehouse/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/mosfilm_warehouse/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/mosfilm_warehouse/placeholder.jpg'),
       },
       {
         name: 'Mosfilm, Film Studio',
@@ -55,10 +55,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/mosfilm_studio/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/mosfilm_studio/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/mosfilm_studio/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/mosfilm_studio/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/mosfilm_studio/placeholder.jpg'),
       },
       {
         name: 'Mockup for Residential Complex Cherry Orchard',
@@ -68,10 +68,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/cherry_orchard/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/cherry_orchard/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/cherry_orchard/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/cherry_orchard/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/cherry_orchard/placeholder.jpg'),
       },
       {
         name: 'Residential Complex «Basmanny»',
@@ -82,10 +82,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/basmanny/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/basmanny/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/basmanny/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/basmanny/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/basmanny/placeholder.jpg'),
       },
       {
         name: "Residential Complex «I'M Tverskaya»",
@@ -96,10 +96,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/im_tverskaya/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/im_tverskaya/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/im_tverskaya/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/im_tverskaya/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/im_tverskaya/placeholder.jpg'),
       },
       {
         name: 'Sheremetyevo Cargo',
@@ -110,10 +110,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/sheremetyevo/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/sheremetyevo/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/sheremetyevo/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/sheremetyevo/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/sheremetyevo/placeholder.jpg'),
       },
       {
         name: 'Business complex «Pilyugina»',
@@ -124,10 +124,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/pilyugina/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/pilyugina/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/pilyugina/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/pilyugina/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/pilyugina/placeholder.jpg'),
       },
       {
         name: 'Houses',
@@ -136,10 +136,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/houses',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/houses/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/houses/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/houses/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/houses/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -148,10 +148,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_crimea',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_crimea/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_crimea/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_crimea/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_crimea/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -160,10 +160,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_fashevka',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_fashevka/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_fashevka/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_fashevka/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_fashevka/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -172,10 +172,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_yalta',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_yalta/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_yalta/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_yalta/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_yalta/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -184,10 +184,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_potoshovo',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_potoshovo/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_potoshovo/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_potoshovo/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_potoshovo/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -196,10 +196,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_terem',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_terem/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_terem/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_terem/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_terem/placeholder.jpg'),
       },
       {
         name: 'House',
@@ -208,10 +208,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/houses/house_villa',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/houses/house_villa/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/houses/house_villa/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/house_villa/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/house_villa/placeholder.jpg'),
       },
       {
         name: 'Hotel «Lipetsk». Reconstruction',
@@ -219,10 +219,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/hotel_lipetsk/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/hotel_lipetsk/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/hotel_lipetsk/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/hotel_lipetsk/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/hotel_lipetsk/placeholder.jpg'),
       },
       {
         name: 'Hotel «LOGOS»',
@@ -230,10 +230,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/hotel_logos/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/hotel_logos/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/hotel_logos/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/hotel_logos/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/hotel_logos/placeholder.jpg'),
       },
       {
         name: 'Manufacturing building',
@@ -241,10 +241,10 @@ export default {
         images: require.context(
           '@/assets/img/portfolio/manufacturing_building/',
           true,
-          /\png$/
+          /\.jpg$/
         ),
-        preview: require('@/assets/img/portfolio/manufacturing_building/preview/preview.jpg'),
-        placeholder: require('@/assets/img/portfolio/manufacturing_building/preview/placeholder.jpg'),
+        preview: require('@/assets/img/portfolio/previews/manufacturing_building/preview.jpg'),
+        placeholder: require('@/assets/img/portfolio/previews/manufacturing_building/placeholder.jpg'),
       },
     ],
   },
