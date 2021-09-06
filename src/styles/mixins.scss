@@ -2,7 +2,8 @@
 
 @mixin container {
   box-sizing: border-box;
-  width: calc(100vw - 15rem);
+  //width: calc(100vw - 15rem);
+  width: 100%;
   padding: 2rem;
 }
 

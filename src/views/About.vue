@@ -106,6 +106,7 @@ export default {
 .picture-container {
   grid-area: picture;
   height: fit-content;
+  max-width: 490px;
 
   p {
     display: flex;
@@ -185,7 +186,7 @@ export default {
 
   section {
     box-sizing: border-box;
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     padding: 0 1rem;
   }
 
@@ -197,6 +198,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: unset;
     width: 100%;
     height: 100%;
     padding: 0;
